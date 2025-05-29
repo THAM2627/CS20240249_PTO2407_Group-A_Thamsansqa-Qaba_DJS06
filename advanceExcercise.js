@@ -28,5 +28,5 @@ const products = [
   )
 
   console.log (
-    products.reduce
+    products.reduce((acc, product) => ({ ...acc, [product.id]: { name: product.name, cost: product.price } }), {})
   )
