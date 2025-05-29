@@ -23,7 +23,8 @@ const products = [
   )
 
   console.log(
-    `Highest: ${Math.max(...products.map(product => product.price))}. Lowest: ${Math.min(...products.map(product => product.price))}`
+    `Highest: ${Math.max(...products.map(product => product.price))}. 
+    Lowest: ${Math.min(...products.map(product => product.price))}`
   )
 
   console.log (
