@@ -22,4 +22,10 @@ const products = [
       products.reduce((acc, product) => acc + product.name, '')
   )
 
-  
+  console.log(
+    `Highest: ${Math.max(...products.map(product => product.price))}. Lowest: ${Math.min(...products.map(product => product.price))}`
+  )
+
+  console.log (
+    products.reduce
+  )
