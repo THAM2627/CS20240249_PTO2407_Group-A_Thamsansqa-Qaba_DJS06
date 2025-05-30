@@ -8,9 +8,9 @@ const products = [
   ];
 
   console.log (
-    ${products.map(product => product.product)} + 
+    `${products.map(product => product.product)}` + 
 
-    ${products.filter(product => product.product.length <= 5)} +
+    `${products.filter(product => product.product.length <= 5)}` +
 
     `${products
     .filter(product => product.price)
@@ -21,7 +21,8 @@ const products = [
 
     `Highest: ${Math.max(...products.map(product => product.price))}. 
     Lowest: ${Math.min(...products.map(product => product.price))}`+
-    products.reduce((acc, product) => ({ ...acc, [product.id]: { name: product.product, cost: product.price } }), {})
+
+    `${products.reduce((acc, product) => ({ ...acc, [product.id]: { name: product.product, cost: product.price } }), {})}`
   )
 
   console.log(products.filter(product => product.name.length <= 5));
