@@ -7,7 +7,18 @@ const products = [
     { product: 'tea', price: '' },
   ];
 
-  console.log(products.map(product => product.name));
+  console.log (
+    products.map(product => product.name) + 
+    products.filter(product => product.name.length <= 5) +
+    products
+    .filter(product => product.price)
+    .map(product => product.price)
+    .reduce((acc, price) => acc + price, 0) +
+    products.reduce((acc, product) => acc + product.name, '') +  
+    `Highest: ${Math.max(...products.map(product => product.price))}. 
+    Lowest: ${Math.min(...products.map(product => product.price))}`+
+    products.reduce((acc, product) => ({ ...acc, [product.id]: { name: product.name, cost: product.price } }), {})
+  )
 
   console.log(products.filter(product => product.name.length <= 5));
 
