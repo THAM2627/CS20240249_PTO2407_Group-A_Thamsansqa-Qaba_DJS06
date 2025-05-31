@@ -17,12 +17,12 @@ const products = [
     .map(product => product.price)
     .reduce((acc, price) => acc + price, 0)}` +
 
-    `${products.reduce((acc, product) => acc + product.name, '')}` +
+    `${products.reduce((acc, product) => acc + product.product, '')}` +
 
     `Highest: ${Math.max(...products.map(product => product.price))}. 
     Lowest: ${Math.min(...products.map(product => product.price))}`+
 
-    `${products.reduce((acc, product) => ({ ...acc, [product.id]: { name: product.product, cost: product.price } }), {})}`
+    `${products.reduce((acc, product) => ({ ...acc, [index]: { name: product.product, cost: product.price } }), {})}`
   )
 
   console.log(products.filter(product => product.name.length <= 5));
