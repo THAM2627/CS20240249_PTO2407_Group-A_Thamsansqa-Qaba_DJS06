@@ -3,3 +3,5 @@ const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifso', 'Shailen', 'Frikki
 const namesWithS = names.map(name => name.includes('S'));
 
 const anyNamesWithS = namesWithS.some(s => s);
+
+console.log(anyNamesWithS);
