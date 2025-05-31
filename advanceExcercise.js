@@ -22,7 +22,7 @@ const products = [
     `Highest: ${Math.max(...products.map(product => product.price))}. 
     Lowest: ${Math.min(...products.map(product => product.price))}`+
 
-    `${products.reduce((acc, product) => ({ ...acc, [index]: { name: product.product, cost: product.price } }), {})}`
+    `${products.reduce((acc, product) => ({ ...acc, [product.product]: { name: product.product, cost: product.price } }), {})}`
   )
 
   console.log(products.filter(product => product.name.length <= 5));
